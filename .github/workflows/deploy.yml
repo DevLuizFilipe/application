@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-local
+    runs-on: ubuntu-latest
 
     steps:
       - name: Configurando AWS Credentials
@@ -16,6 +16,16 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+
+      - name: Exibir diretório atual
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const dir = execSync('pwd').toString().trim();
+            console.log(`Diretório atual: ${dir}`);
+            const content = execSync('ls').toString().trim();
+            console.log(`Conteúdo do diretório: ${content}`);
 
       - name: Deploy no S3
         run: |
