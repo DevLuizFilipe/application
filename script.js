@@ -1,5 +1,5 @@
 function callBackend() {
-    const backendURL = "<URL_do_back-end>"; // Insira a URL do back-end aqui
+    const backendURL = process.env.BACKEND_URL;
     fetch(backendURL)
       .then(response => response.text())
       .then(data => {
