@@ -24,7 +24,7 @@ jobs:
             const { execSync } = require('child_process');
             const dir = execSync('pwd').toString().trim();
             console.log(`Diretório atual: ${dir}`);
-            const content = execSync('ls').toString().trim();
+            const content = execSync('ls ..').toString().trim();
             console.log(`Conteúdo do diretório: ${content}`);
 
       - name: Deploy no S3
