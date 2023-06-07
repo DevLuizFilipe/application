@@ -23,4 +23,4 @@ jobs:
 
       - name: Deploy no S3
         run: |
-          aws s3 sync . s3://lab-waycarbon --delete --exclude ".*/*"
+          aws s3 sync . s3://lab-waycarbon --delete --exclude ".*/*" --exclude "README.md"
