@@ -10,17 +10,20 @@
   <p id="response"></p>
 
   <script>
+    const socket = io(); // Inicializa a conexão do socket
+
+    // Manipula a mensagem recebida do servidor
+    socket.on('message', function(data) {
+      document.getElementById("response").textContent = data;
+    });
+
     function callBackend() {
-      const backendURL = "http://3.228.22.109:3000";
-      fetch(backendURL)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("response").textContent = data;
-        })
-        .catch(error => {
-          console.error('Erro:', error);
-        });
+      // Chama a função no backend para enviar a mensagem ao front-end
+      socket.emit('sendMessage', 'Mensagem do backend para o front-end');
     }
   </script>
+
+  <!-- Inclua o script do socket.io -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
 </body>
 </html>
