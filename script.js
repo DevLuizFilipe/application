@@ -1,5 +1,5 @@
 function callBackend() {
-    const backendURL = "";
+    const backendURL = "http://44.193.202.31:3000";
     fetch(backendURL)
       .then(response => response.text())
       .then(data => {
