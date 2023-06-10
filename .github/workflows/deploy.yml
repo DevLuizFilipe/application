@@ -21,9 +21,9 @@ jobs:
           aws-secret-access-key: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           aws-region: "us-east-1"
 
-      - name: Substituir variáveis no código de backend
+      - name: Substituir variáveis no código de frontend
         run: |
-          sed -i "s/\BACKEND_URL/${{ vars.BACKEND_URL }}/g" index.js
+          sed -i "s/\BACKEND_URL/'${{ vars.BACKEND_URL }}'/g" index.js
 
       - name: Deploy no S3
         run: |
