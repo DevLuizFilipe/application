@@ -17,9 +17,13 @@ jobs:
       - name: Configurando AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-access-key-id: "${{ secrets.AWS_ACCESS_KEY_ID }}"
+          aws-secret-access-key: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          aws-region: "us-east-1"
+
+      - name: Substituir variáveis no código de backend
+        run: |
+          sed -i "s/\BACKEND_URL/${{ vars.BACKEND_URL }}/g" index.js
 
       - name: Deploy no S3
         run: |
