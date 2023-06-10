@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+form > * {
+  margin: 5px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+button {
+  background-color: #4CAF50; /* Cor de fundo verde */
+  color: white; /* Cor do texto branco */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Cor de fundo verde mais escura ao passar o mouse */
+}
+
+input[type="file"] {
+  background-color: #f2f2f2; /* Cor de fundo cinza claro */
+  padding: 10px;
+  border: none;
+}
+
+input[type="file"]:focus {
+  background-color: #ddd; /* Cor de fundo cinza mais escuro ao receber foco */
+}
