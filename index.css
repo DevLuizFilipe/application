@@ -13,6 +13,7 @@ body, html {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centralizar horizontalmente */
   width: 300px;
   text-align: center;
 }
