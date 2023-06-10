@@ -1,8 +1,19 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  margin: auto;
   text-align: center;
 }
 
@@ -12,24 +23,28 @@ form > * {
   font-size: 18px;
 }
 
+h2 {
+  margin: 0;
+}
+
 button {
-  background-color: #4CAF50; /* Cor de fundo verde */
-  color: white; /* Cor do texto branco */
+  background-color: #4CAF50;
+  color: white;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049; /* Cor de fundo verde mais escura ao passar o mouse */
+  background-color: #45a049;
 }
 
 input[type="file"] {
-  background-color: #f2f2f2; /* Cor de fundo cinza claro */
+  background-color: #f2f2f2;
   padding: 10px;
   border: none;
 }
 
 input[type="file"]:focus {
-  background-color: #ddd; /* Cor de fundo cinza mais escuro ao receber foco */
+  background-color: #ddd;
 }
