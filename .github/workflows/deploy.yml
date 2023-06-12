@@ -23,7 +23,7 @@ jobs:
 
       - name: Substituir variáveis no código de frontend
         run: |
-          sed -i "s|BACKEND_URL|${{ vars.BACKEND_URL }}|g" index.js
+          sed -i "s|BACKEND_URL|${{ vars.BACKEND_URL }}|g" index.html
 
       - name: Deploy no S3
         run: |
