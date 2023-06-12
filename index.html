@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <style>
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
 }
 
 h2 {
@@ -25,7 +31,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 20px 2px;
   cursor: pointer;
   border: none;
 }
@@ -33,16 +39,22 @@ button {
 p {
   color: #333;
   font-size: 20px;
+  border: 1px solid #333;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
 }
 </style>
 </head>
 <body>
 
-<h2>Teste de Comunicação com Backend</h2>
+<div class="container">
+  <h2>Teste de Comunicação com Backend</h2>
 
-<button type="button" onclick="loadDoc()">Solicitar dados</button>
+  <button type="button" onclick="loadDoc()">Solicitar dados</button>
 
-<p id="demo"></p>
+  <p id="demo"></p>
+</div>
 
 <script>
 function loadDoc() {
