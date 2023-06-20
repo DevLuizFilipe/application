@@ -1,2 +1,2 @@
 # application
-Aplicação simples que integra ao backend
+Aplicação simples que roda no S3 e se integra ao backend.
